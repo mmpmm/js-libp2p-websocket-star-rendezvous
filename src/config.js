@@ -17,7 +17,7 @@ module.exports = {
       }
     }
   },
-  refreshPeerListIntervalMS: 91000,
+  refreshPeerListIntervalMS: 11000,
   cryptoChallenge: true,
   strictMultiaddr: false,
   metrics: false
