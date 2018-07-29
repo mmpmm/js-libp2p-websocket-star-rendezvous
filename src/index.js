@@ -7,7 +7,6 @@ const merge = require('merge-recursive').recursive
 const defaultConfig = require('./config')
 
 exports = module.exports
-
 exports.start = (options, callback) => {
   if (typeof options === 'function') {
     callback = options

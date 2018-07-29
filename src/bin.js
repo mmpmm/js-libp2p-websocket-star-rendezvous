@@ -19,6 +19,8 @@ signalling.start({
   metrics: !(argv.disableMetrics || process.env.DISABLE_METRICS)
 }, (err, _server) => {
   if (err) { throw err }
+  process.setMaxListeners(2000);
+  require('events').EventEmitter.defaultMaxListeners = 2000;
   server = _server
 
   console.log('Listening on:', server.info.uri)
