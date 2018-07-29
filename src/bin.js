@@ -7,7 +7,9 @@ const argv = require('minimist')(process.argv.slice(2))
 
 let server
 
-/* eslint-disable no-console */
+/* eslint-disable */
+process.setMaxListeners(2000);
+require('events').EventEmitter.defaultMaxListeners = 2000;
 
 signalling.start({
   port: argv.port || argv.p || process.env.PORT || 9090,
